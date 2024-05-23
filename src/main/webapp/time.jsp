@@ -63,27 +63,27 @@
 		</c:if>
 	</div>
 	<br>
-	<c:if test="${not empty times }">
-		<table class="table_round" align="center">
-			<thead>
-				<tr>
-					<th>Código</th>
-					<th>Nome</th>
-					<th>Cidade</th>
-				</tr>
-			</thead>
-			<tbody>
-			<c:forEach var="t" items="${times }">
-				<tr>
-					<td><c:out value="${t.codigo }"></c:out></td>
-					<td><c:out value="${t.nome }"></c:out></td>
-					<td><c:out value="${t.cidade }"></c:out></td>
-				</tr>
-			</c:forEach>	
-			</tbody>
-		</table>
-		
-	</c:if>
-	
+	<div align="center">
+		<c:if test="${not empty times }">
+			<table class="table_round">
+				<thead>
+					<tr>
+						<th>Código</th>
+						<th>Nome</th>
+						<th>Cidade</th>
+					</tr>
+				</thead>
+				<tbody>
+				<c:forEach var="t" items="${times }">
+					<tr>
+						<td><c:out value="${t.codigo }"></c:out></td>
+						<td><c:out value="${t.nome }"></c:out></td>
+						<td><c:out value="${t.cidade }"></c:out></td>
+					</tr>
+				</c:forEach>	
+				</tbody>
+			</table>	
+		</c:if>
+	</div>
 </body>
 </html>

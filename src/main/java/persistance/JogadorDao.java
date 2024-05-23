@@ -118,6 +118,8 @@ public class JogadorDao implements ICrud<Jogador>{
 			j.setAltura(rs.getFloat("altura"));
 			j.setPeso(rs.getFloat("peso"));
 			j.setTime(t);
+			
+			jogadores.add(j);
 		}
 		rs.close();
 		ps.close();

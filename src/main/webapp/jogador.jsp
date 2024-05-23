@@ -43,7 +43,7 @@
 				</tr>
 				<tr>
 					<td colspan="4">
-						<input class="input_data" type="number" min="0" step="0.1" id="altura" name="altura" placeholder="Altura do jogador (m)"
+						<input class="input_data" type="number" min="0" step="0.01" id="altura" name="altura" placeholder="Altura do jogador (m)"
 						value='<c:out value="${jogador.altura }"></c:out>'>
 					</td>
 				</tr>
@@ -95,32 +95,33 @@
 		</c:if>
 	</div>
 	<br>
-	<c:if test="${not empty jogadores }">
-		<table>
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Nome</th>
-					<th>Data de Nascimento</th>
-					<th>Altura</th>
-					<th>Peso</th>
-					<th>Time</th>
-				</tr>
-			</thead>
-			<tbody>
-			<c:forEach var="j" items="${jogadores }">
-				<tr>
-					<td><c:out value="${j.id }"></c:out></td>
-					<td><c:out value="${j.nome }"></c:out></td>
-					<td><c:out value="${j.dataNasc }"></c:out></td>
-					<td><c:out value="${j.altura }"></c:out></td>
-					<td><c:out value="${j.peso }"></c:out></td>
-					<td><c:out value="${j.time }"></c:out></td>
-				</tr>
-			</c:forEach>	
-			</tbody>
-		</table>
-		
-	</c:if>
+	<div align="center">
+		<c:if test="${not empty jogadores }">
+			<table class="table_round">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Nome</th>
+						<th>Data de Nascimento</th>
+						<th>Altura</th>
+						<th>Peso</th>
+						<th>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+				<c:forEach var="j" items="${jogadores }">
+					<tr>
+						<td><c:out value="${j.id }"></c:out></td>
+						<td><c:out value="${j.nome }"></c:out></td>
+						<td><c:out value="${j.dataNasc }"></c:out></td>
+						<td><c:out value="${j.altura }"></c:out></td>
+						<td><c:out value="${j.peso }"></c:out></td>
+						<td><c:out value="${j.time.nome }"></c:out></td>
+					</tr>
+				</c:forEach>	
+				</tbody>
+			</table>	
+		</c:if>
+	</div>
 </body>
 </html>
